@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieMK.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Button Text="Wybierz plik" Clicked="ButtonPickFileClicked" />
+            <Label Text="Wybierz klasę" />
+            <Picker x:Name="classPicker" ></Picker>
+            <Button Text="Losuj ucznia" Clicked="ButtonDrawStudentClicked" />
+            <Label Text="Lista uczniów" />
+            <ScrollView>
+                <Editor x:Name="textInput" HeightRequest="150" TextChanged="TextInput_TextChanged" />
+                
+            </ScrollView>
+            <Label x:Name="resultLabel" Text="Wynik losowania pojawi się tutaj" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
